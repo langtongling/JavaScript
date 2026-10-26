@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        h3{
+            height: 400px;
+        }
+    </style>
+</head>
+<body>
+    <h3>哈哈哈哈哈</h3>
+    <h3>呵呵呵呵呵</h3>
+    <h3>啦啦啦啦啦</h3>
+    <h3>哼哼哼哼哼</h3>
+
+    <script>
+
+        //滚动事件
+        //scrollHandler：是将函数引用传给事件，而不是执行它
+        //scrollHandler()：加上括号 () 意味着立即调用这个函数。这样写的话，页面一加载完，函数就会执行一次,然后把函数的返回值（因为函数没有 return，所以是 undefined）赋值给了 window.onscroll
+        window.onscroll = scrollHandler; 
+
+        function scrollHandler() {
+            var scrollTop = document.documentElement.scrollTop;
+            console.log("滚动条位置：" + scrollTop);
+        }
+
+
+    </script>
+
+</body>
+</html>

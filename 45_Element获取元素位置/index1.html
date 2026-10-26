@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+        }
+
+        .root{
+            width: 500px;
+            height: 500px;
+            background-color: #999;
+            margin: 50px;
+            position: relative;
+        }
+        .box{
+            width: 200px;
+            height: 200px;
+            background-color: red;
+            margin: 100px;
+        }
+
+
+
+    </style>
+
+</head>
+<body>
+    <div class="root">
+        <div class="box"   id="box1">会当凌绝顶</div>
+    </div>
+
+    <script>
+        var p = document.getElementById("box1");
+        console.log(p.offsetLeft);
+        console.log(p.offsetTop);
+        
+
+    </script>
+    
+</body>
+</html>

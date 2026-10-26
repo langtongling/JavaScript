@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        #someDiv{
+            width: 100px;
+            height: 100px;
+            background-color: red;
+            opacity: 1;
+        }
+    </style>
+
+</head>
+<body>
+    
+    <div id="someDiv">京东</div>
+
+    <script>
+
+        var div = document.getElementById("someDiv");
+        // 透明度：opacity：取值范围0~1
+        var opact = 1;
+
+        var fade = setInterval(function(){
+            if(opact>0){
+                opact -= 0.05;
+                div.style.opacity = opact;
+            }else{
+                opact = 1;
+                // clearInterval(fade);
+            }
+        },300)
+
+    </script>
+
+</body>
+</html>

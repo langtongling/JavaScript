@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box{
+            width: 200px;
+            height: 200px;
+        }
+
+        .box1{
+            background-color: red;
+        }
+    </style>
+
+</head>
+<body>
+    <div class="box" id="root">hello1</div>
+
+    <script>
+        //  var p = document.getElementById("root");
+        // var p = document.querySelector("#root");
+        var p = document.querySelector("div");
+        console.log(p.id);
+        p.id = 'roots';
+        console.log(p.id);
+
+        console.log(p.className);
+        p.className = 'box box1'
+        console.log(p.className);
+
+        p.classList.add('mybox');
+        p.classList.remove('box');
+
+        if(p.classList.contains("box")){
+            console.log("有");
+        }else{
+            console.log("没有");
+        }
+        console.log( p.classList.toggle('box') ); //移入true，移出false
+
+        console.log(p.innerHTML); //读
+        console.log(p.innerHTML = "大家好啊"); //写
+
+        console.log(p.innerText); //读
+        console.log(p.innerText = "哇哈哈哈哈哈哈"); //写
+
+        /*  innerHTMML和innerText的区别：
+        innerHTML：可以识别标签
+        innerText：会把标签识别成一个字符串     */
+        var str = "<a href='http://27.223.86.30:9631/wel/index'>临夏海螺</a>"
+        // p.innerHTML = str;
+        p.innerText = str;
+
+    </script>
+
+</body>
+</html>

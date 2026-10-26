@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box5{
+            width: 100px;
+            height: 100px;
+            background-color: red;
+        }
+
+        .box6{
+            width: 100px;
+            height: 100px;
+            background-color: yellow;
+        }
+
+        .box7{
+            width: 100px;
+            height: 100px;
+            background-color: green;
+        }
+
+        .box8{
+            width: 100px;
+            height: 100px;
+            background-color:blue;
+        }
+
+        .box9{
+            width: 100px;
+            height: 100px;
+            background-color:purple;
+        }
+
+    </style>
+
+
+</head>
+<body>
+    
+    <button id="btn1">单击</button>
+    <button id="btn2">双击</button>
+    <button id="btn3">鼠标按下</button>
+    <button id="btn4">鼠标抬起</button>
+
+    <div id="btn5" class="box5">鼠标移动</div>
+    <div id="btn6" class="box6">鼠标进入</div>
+    <div id="btn7" class="box7">鼠标离开</div>
+    <div id="btn8" class="box8">鼠标进入</div>
+    <div id="btn9" class="box9">鼠标离开</div>
+
+    <script>
+        
+        var btn1 = document.getElementById('btn1');
+        btn1.onclick = function(){
+            console.log('单击事件');
+            
+        }
+
+        var btn2 = document.getElementById('btn2');
+        btn2.ondblclick = function(){
+            console.log('双击事件');
+        }
+
+        var btn3 = document.getElementById('btn3');
+        btn3.onmousedown = function(){
+            console.log('鼠标按下');
+        }
+
+        var btn4 = document.getElementById('btn4');
+        btn4.onmouseup = function(){
+            console.log("鼠标抬起");
+        }
+
+        var btn5 = document.getElementById('btn5');
+        btn5.onmousemove = function(){
+            console.log("鼠标移动了");
+        }
+
+        var btn6 = document.getElementById('btn6');
+        btn6.onmouseenter = function(){
+            console.log("鼠标进入了");
+        }
+
+        var btn7 = document.getElementById('btn7');
+        btn7.onmouseleave = function(){
+            console.log("鼠标离开了");
+            
+        }
+
+        var btn8 = document.getElementById('btn8');
+        btn8.onmouseover = function(){
+            console.log("鼠标进入了");
+        }
+
+        var btn9 = document.getElementById('btn9');
+        btn9.onmouseout = function(){
+            console.log("鼠标离开了");
+        }
+
+    </script>
+
+
+</body>
+</html>

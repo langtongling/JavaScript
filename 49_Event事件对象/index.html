@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button id="btn">按钮</button>
+    <a href="https://itbaizhan.com" id="it">itbaizhan</a>
+
+    <script>
+
+        var btn = document.getElementById('btn');
+        //Event事件对象，其实就是参数
+        btn.onclick = function(event){
+            console.log(event.target);
+            console.log(event.type);
+            if(event.target.innerHTML === "按钮"){
+                event.target.innerHTML = "点击之后";
+            }else if(event.target.innerHTML === "点击之后"){
+                event.target.innerHTML = "按钮"
+            }
+        }
+
+        var it = document.getElementById('it');
+        it.onclick = function(e){
+            e.preventDefault(); //组织默认事件
+            console.log("点击了");
+        }
+
+
+    </script>
+
+
+</body>
+</html>

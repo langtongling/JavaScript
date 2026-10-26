@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <form action = "服务器地址" id="myForm" onsubmit="submitHandle">
+        <input type="text" name="username">
+        <!-- form标签内部，如果button没有明确type属性，浏览器会默认它识别为type=”submit" -->
+        <button id="resetBtn" type="button">重置</button> 
+        <button id="submitBtn" type="submit">提交表单</button>
+    </form>
+    
+    <script>
+       
+        var form = document.getElementById('myForm');
+        //阻拦表单提交：form标签中，当只有一个input时，输入完成按下回车键，浏览器会默认执行表单提交（Submit）操作（即输入框自动清空）
+        // form.onsubmit = function(event){  
+        //     event.preventDefault();
+        //     console.log('表单已提交，已被拦截');
+        // }
+
+         var btn = document.getElementById('resetBtn');
+        btn.onclick = function(){
+            //form.reset(); //触发在表单上：清空表单
+            console.log("按下重置按钮");
+        }
+
+        var submitBtn = document.getElementById(submitBtn);
+        function submitHandle(){
+            console.log("想做的事情");
+        }
+
+
+
+    </script>
+</body>
+</html>

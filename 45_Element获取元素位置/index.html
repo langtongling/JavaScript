@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box{
+            width: 200px;
+            height: 200px;
+            border: 5px solid red;
+            padding: 10px;
+            margin: 20px;
+            background: green;
+        }
+
+        h3{
+            height: 500px;
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="box" id="box1">哇哈哈哈</div>
+    <h3>标题1</h3>
+    <h3>标题2</h3>
+    <h3>标题3</h3>
+    <h3>标题4</h3>
+
+
+    <script>
+        var p = document.getElementById("box1");
+
+        console.log(p.clientWidth);
+        console.log(p.clientHeight);
+
+        //获取视口高度（屏幕高度）
+        console.log(document.documentElement.clientHeight);
+        //获取页面高度
+        console.log(document.body.clientHeight);
+
+        console.log('2-------------------');
+
+        console.log(p.scrollWidth);
+        console.log(p.scrollHeight);
+
+        //获取视口高度（屏幕高度）
+        console.log(document.documentElement.scrollHeight);
+        //获取页面高度
+        console.log(document.body.scrollHeight);
+
+
+        console.log('3-------------------');
+
+
+        console.log(document.documentElement.scrollTop);
+
+        console.log('4-------------------');
+
+        console.log(p.offsetWidth);
+        console.log(p.offsetHeight);
+
+
+    </script>
+    
+</body>
+</html>
